@@ -1,0 +1,9 @@
+# Gives instruction to travis engine to run docker and then build our application
+
+sudo: required
+services:
+  - docker
+
+script: 
+  - docker build -t algofields/node .
+  - docker images algofields/node 
